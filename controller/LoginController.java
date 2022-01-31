@@ -31,6 +31,7 @@ public class LoginController {
         return Mono.just("Metoda qe nuk e permban annotation NotAuthenticate");
     }
 
+    //this endpoint can be accessed without authentication info
     @PostMapping("/test3")
     @NotAuthenticate
     public Mono<Void> logIn(@RequestBody UserLoginDto userLoginDto, ServerWebExchange exchange) {
